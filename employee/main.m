@@ -7,7 +7,7 @@ Employee *myEmp;
 myEmp = [[Employee alloc]init];
 
 [myEmp setEmpID: 1];
-[myEmp setEmpName:@"Juhi Khandelwal"];
+[myEmp setEmpName:@"ABCD"];
 [myEmp setEmpDept:@"ISE"];
 
 NSLog (@"Employee Info:");
