@@ -1,0 +1,71 @@
+Q1> Explore the DVM instructions and prepare a summary of the same atleast for 5 instructions in a detailed format
+
+Instruction 1
+Name : aget
+Syntax : aget vx,vy,vz
+Description: Gets an integer value of an object reference array into vx. The array is referenced by vy and is indexed by vz.
+Example : 4407 0306 - aget v7, v3, v6
+		  Gets an integer array element. The array is referenced by v3 and the element is indexed by v6. The element will be put into v7.
+
+Instruction 2
+Name : goto
+Syntax : goto label
+Description: Unconditional jump to the label by an offset of type short.
+Example: 28F0 - goto 0005 // -0010
+		 Jumps to current position-16 words (hex 10). 0005 is the label of the target instruction.
+
+Instruction 3
+Name: execute-inline 
+Syntax : execute-inline {parameters},inline ID
+Description : Executes the inline method identified by inline ID
+Example : EE20 0300 0100 - execute-inline {v1, v0}, inline #0003
+		  Executes inline method #3 using v1 as "this" and passing one parameter in v0.
+
+Instruction 4
+Name : xor-type
+	   where type may be long,int
+Syntax: xor-int vx, vy, vz
+		xor-long vx, vy, vz
+Description : Calculates the vy XOR vz and puts the result into vx.(Only type is different for above instructions)
+Example : (long type)
+		  A206 0002 - xor-long v6, v0, v2
+		  Calculates v0,v1 XOR v2,v3 and puts the result into v6,v7
+
+Instruction 5
+Name: return
+Syntax : return vx , return-void
+Description : returns the value vx 
+		      return-void returns nothing
+Example : 0F00 - return v0
+		  Returns with return value in v0.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2> Differentiate between mobile and cloud computing
+
+Differences are listed in orders of numbers.
+
+Mobile Computing.
+1. Mobile computing is human–computer interaction by which a computer is expected to be transported during normal usage. Mobile computing involves mobile communication,   mobile hardware, and mobile software. 
+2. It involves Comparatively lesser computational capacity.
+3. Computation is possible even in offline.
+4. Typically involves handheld devices, laptops, tablets etc.
+
+Cloud Computing.
+1. The practice of using a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer.
+2. The distributed software systems are powerful enough to carry out complex calculations.
+3. Every single task needs the internet.
+4. Internet of things are empowered by cloud.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3> Give an example of an application simulating an environment of context aware computing and justify.
+
+ "Behaving" by "understanding" on the scenario can be termed as context aware computing.
+ A mobile app that automatically turns the mobile system into silent mode when the user enters a meeting hall can be an example for context aware computing.
+ Why?
+	Because the mobile user is not directing his device perform any action. Rather the device has "understood" the scenario and "behaved" accordingly.
+ A mobile screen adjusting its brightness according to the level of brightness around it is also an illustration for context aware computing.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
